@@ -26,7 +26,8 @@ if [ "$MULTI_ENDPOINT" = true ] ; then
   done < $ENDPOINTS_FILE
 # Else directly use the source file as response.
 else
-  cp $SRC_FILE $DATA_DIR
+  mkdir -p $DATA_DIR
+  cp $SRC_FILE $DATA_DIR/$DST_FILENAME
   echo "/" >> $ENDPOINTS_FILE
 fi
 
