@@ -1,6 +1,6 @@
 # Mockend
 
-Really really (really?) tiny backend that mocks JSON responses !
+Really really (really?) tiny backend that mocks JSON responses!
 
 Developing application that needs third-party servers to work properly is very painful (configuration, need to be online, server down, backend feature not implemented yet, ...). Here is a very straightforward solution to fake all that servers and make them answer what you want.
 
@@ -9,7 +9,7 @@ All you need is **Docker** and the **JSON file** the server needs to response.
 ## Run
 
 ```
-docker run -d -p 80 -v /stuff/data.json:/data.json virtualpusher/mockend
+docker run -d -p 80 -v /stuff/data.json:/data.json vpusher/mockend
 ```
 
 ## JSON
@@ -45,10 +45,10 @@ Or, it may also describe the responses by endpoints:
 
 ## Build your own mockend
 
-Create a new **Dockerfile** and start from `virtualpusher/mockend` base image:
+Create a new **Dockerfile** and start from `vpusher/mockend` base image:
 
 ```
-FROM virtualpusher/mockend
+FROM vpusher/mockend
 COPY got.json /data.json
 ```
 
