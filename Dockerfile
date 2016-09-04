@@ -7,6 +7,7 @@ RUN chmod a+x /bin/jq
 
 COPY init.sh /init.sh
 RUN chmod a+x /init.sh
+RUN dos2unix /init.sh
 
 COPY default.conf /etc/nginx/conf.d/default.conf
 
